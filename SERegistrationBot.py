@@ -11,7 +11,6 @@ from bs4 import BeautifulSoup
 
 # Startup and reference values
 client = discord.Client()
-juxid = '122661718974398468'
 
 
 # All data titles are in proper cases i.e. Data Titles or command e.g. ;asteroid
