@@ -96,6 +96,8 @@ async def on_message(message):
                             await client.edit_message(messaged, edited_message)
                         else:
                             await client.send_message(message.channel, "Sorry, that system had already been discovered by {0}!".format(message.author.display_name))
+                else:
+                    await client.send_message(message.channel, 'Register in the format:\n```;register (link to .sc file) (system name)```')
             else:
                 await client.send_message(message.channel, "{0}, please wait another {1} seconds before registering another system.".format(message.author.mention, int(300-time_passed)))
 
@@ -106,7 +108,7 @@ async def on_message(message):
             else:
                 await client.send_message(message.channel, "{0}, you have not registered a single system. Use ;register to register an exported system!".format(message.author.mention)) 
         elif message.content == ';help':
-            await client.send_message(message.channel, 'Use ;register to register a system and ;score to see score!\nIn order to upload a system, use the "Export System" option and upload the .sc file to Discord before getting the link!')
+            await client.send_message(message.channel, 'Use ;register (link) (system name) to register a system and ;score to see score!\nIn order to upload a system, use the "Export System" option and upload the .sc file to Discord before getting the link!')
                             
 #Just to know it's running    
 @client.event
