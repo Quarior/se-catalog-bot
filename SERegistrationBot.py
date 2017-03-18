@@ -118,7 +118,7 @@ async def on_message(message):
                 for sdic in sr:
                     s.append('{0}. {1} - {2} Stars and {3} planets ({4} points)'.format(sr.index(sdic)+1,sdic['nick'],
                                                                                         sdic['body_count']['Star'],
-                                                                                        sdic['body_count']['Planet'], sdic['value'])     
+                                                                                        sdic['body_count']['Planet'], sdic['value']))     
                 s = '```{0}```'.format('\n'.join(sl))
                 c = 0
                 while len(s) > 1999:
