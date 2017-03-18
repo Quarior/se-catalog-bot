@@ -88,9 +88,11 @@ async def on_message(message):
                                 bm = ' **Congratulations in uploading your first system! You earned a 1.5x multiplier for first time!**'
                             cur_sc = score['users'][maid]['points']
                             reg_time = time.time()
+                            score['system_list'][systemname]['value'] = int(t_v)
                             score['time'][message.author.id] = reg_time
+                            score['system_list'][systemname]['nick'] = nickname
                             score['system_list'][systemname]['time_discovered'] = reg_time
-                            score['system_list'][systemname]['discovered_by'] = message.author.name
+                            score['system_list'][systemname]['discovered_by'] = message.author.id
                             jsonwrite(score, 'explorer_data.json')
                             edited_message = '{0} registered to database.\n{1} bodies registered with {2} stars and {3} planets.\n{4} points have been added to {5}\'s account.\nCurrent: {7} points.{6}'.format(nickname, b_c, s_c, p_c, sys_score, message.author.mention, bm, cur_sc)
                             await client.edit_message(messaged, edited_message)
@@ -107,8 +109,30 @@ async def on_message(message):
                 await client.send_message(message.channel, "{0}, you currently have {1} points from {2} systems.".format(message.author.mention, score['users'][maid]['points'], score['users'][maid]['systems_discovered']))
             else:
                 await client.send_message(message.channel, "{0}, you have not registered a single system. Use ;register to register an exported system!".format(message.author.mention)) 
+        # List systems
+        elif message.content == ';systems':
+            if maid in list(score['users'].keys()):
+                sy = score['system_list']
+                sr = [k for k in sy if k['discovered_by'] == maid]
+                sl = []
+                for sdic in sr:
+                    s.append('{0}. {1} - {2} Stars and {3} planets ({4} points)'.format(sr.index(sdic)+1,sdic['nick'],
+                                                                                        sdic['body_count']['Star'],sdic['body_count']['Planet'], sdic['value'])     
+                s = '```{0}```'.format('\n'.join(sl))
+                c = 0
+                while len(s) > 1999:
+                    sl = sl[1:] 
+                    c += 1
+                    s = '```{0}```'.format('\n'.join(sl))
+                await client.send_message(message.channel, s)
+                if c != 0:
+                    await client.send_message(message.channel, 'and {0} more...'.format(c))
+            else:
+                await client.send_message(message.channel, 'You have no registered systems.')
+        
         elif message.content == ';help':
-            await client.send_message(message.channel, 'Use ;register (link) (system name) to register a system and ;score to see score!\nIn order to upload a system, use the "Export System" option and upload the .sc file to Discord before getting the link!')
+            await client.send_message(message.channel, 'Use ;register (link) (system name) to register a system, \
+            ;score to see score, and ;system to see registered names!\nIn order to upload a system, use the "Export System" option and upload the .sc file to Discord before getting the link!')
                             
 #Just to know it's running    
 @client.event
