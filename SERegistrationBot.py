@@ -117,7 +117,8 @@ async def on_message(message):
                 sl = []
                 for sdic in sr:
                     s.append('{0}. {1} - {2} Stars and {3} planets ({4} points)'.format(sr.index(sdic)+1,sdic['nick'],
-                                                                                        sdic['body_count']['Star'],sdic['body_count']['Planet'], sdic['value'])     
+                                                                                        sdic['body_count']['Star'],
+                                                                                        sdic['body_count']['Planet'], sdic['value'])     
                 s = '```{0}```'.format('\n'.join(sl))
                 c = 0
                 while len(s) > 1999:
@@ -132,7 +133,8 @@ async def on_message(message):
         
         elif message.content == ';help':
             await client.send_message(message.channel, 'Use ;register (link) (system name) to register a system, \
-            ;score to see score, and ;system to see registered names!\nIn order to upload a system, use the "Export System" option and upload the .sc file to Discord before getting the link!')
+            ;score to see score, and ;system to see registered names!\nIn order to upload a system, use the "Export\
+            System" option and upload the .sc file to Discord before getting the link!')
                             
 #Just to know it's running    
 @client.event
