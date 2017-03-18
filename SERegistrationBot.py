@@ -113,10 +113,11 @@ async def on_message(message):
         elif message.content == ';systems':
             if maid in list(score['users'].keys()):
                 sy = score['system_list']
-                sr = [k for k in sy if k['discovered_by'] == maid]
+                print([k for k in sy])
+                sr = [sy[k] for k in sy if sy[k]['discovered_by'] == maid]
                 sl = []
                 for sdic in sr:
-                    s.append('{0}. {1} - {2} Stars and {3} planets ({4} points)'.format(sr.index(sdic)+1,sdic['nick'],
+                    sl.append('{0}. {1} - {2} Stars and {3} planets ({4} points)'.format(sr.index(sdic)+1,sdic['nick'],
                                                                                         sdic['body_count']['Star'],
                                                                                         sdic['body_count']['Planet'], sdic['value']))     
                 s = '```{0}```'.format('\n'.join(sl))
