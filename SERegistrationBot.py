@@ -34,7 +34,7 @@ async def on_message(message):
         maid = message.author.id
 
         # Register a system
-        if message.content.startswith(';register '):
+        if message.content.startswith(';register'):
             time_list = score['time']
             if message.author.id in list(time_list.keys()):
                 last = time_list[message.author.id]
