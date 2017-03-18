@@ -132,9 +132,7 @@ async def on_message(message):
                 await client.send_message(message.channel, 'You have no registered systems.')
         
         elif message.content == ';help':
-            await client.send_message(message.channel, 'Use ;register (link) (system name) to register a system, \
-            ;score to see score, and ;system to see registered names!\nIn order to upload a system, use the "Export\
-            System" option and upload the .sc file to Discord before getting the link!')
+            await client.send_message(message.channel, 'Use ;register (link) (system name) to register a system, ;score to see score, and ;system to see registered names!\nIn order to upload a system, use the "Export System" option and upload the .sc file to Discord before getting the link!')
                             
 #Just to know it's running    
 @client.event
