@@ -51,6 +51,10 @@ def to_json(sourcefile, filename_target, systemname, nickname = None):
             if '}' in t.split():
                 k_2[lineno] = '},'
     k_2[-1] = '}'
+    for line in k_2:
+        if line.startswith('"Class"'):
+            if len(line.split()) < 2:
+                k_2[k_2.index(line)] = ''
     a = '{\n' + '\n'.join(k_2) + '\n}'
     js = json.loads(a)
     bodies = list(js.keys())
