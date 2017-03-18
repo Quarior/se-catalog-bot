@@ -141,7 +141,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.send_message(client.get_channel(str(217142893440270346)), 'I\'m online, use ;register to register your systems!')
+    # await client.send_message(client.get_channel(str(217142893440270346)), 'I\'m online, use ;register to register your systems!')
         
 
 #Runs the whole thing
