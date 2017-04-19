@@ -189,6 +189,6 @@ async def on_ready():
     # await client.send_message(client.get_channel(str(217142893440270346)), 'I\'m online, use ;register to register your systems!')
         
 
-#Runs the whole thing
-client.run('MzA0MTg4NDEwMDA2ODYzODcy.C9jcyA.DZ2ELJuTv0NMni-fx13Hvamni9Q')
+#Runs the whole thing (token)
+client.run('MzA0MTg4NDEwMDA2ODYzODcy.C9jxmw.4_JYxDjJ9wRXs5r7Hk5e2LUI3Ew')
 
