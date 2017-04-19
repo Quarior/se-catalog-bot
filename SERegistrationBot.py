@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 # Startup and reference values
 client = discord.Client()
 token = 'MzA0MTg4NDEwMDA2ODYzODcy.C9jxmw.4_JYxDjJ9wRXs5r7Hk5e2LUI3Ew' #token of the bot
-channel = '302921958696419328/302933532563734530'
+channel = '302921958696419328'
 #Input
 Register = ';register'
 Score = ';score'
@@ -33,7 +33,7 @@ StrWait = "{0}, please wait another {1} seconds before registering another syste
 StrScore1 = "{0}, you currently have {1} points from {2} systems."
 StrScore0 = "{0}, you have not registered a single system. Use {1} to register an exported system !"
 #Systems
-StrSystems
+StrSystems = '{0}. {1} - {2} Stars and {3} planets ({4} points)'
 StrSystemsMore = 'and {0} more...'
 StrSystems0 = "You have no registered systems."
 #Help
