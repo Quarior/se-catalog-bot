@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 # Startup and reference values
 client = discord.Client()
 token = 'MzA0MTg4NDEwMDA2ODYzODcy.C9jxmw.4_JYxDjJ9wRXs5r7Hk5e2LUI3Ew' #token of the bot
-channel = '302921958696419328'
+channel = '302933532563734530'
 #Input
 Register = ';register'
 Score = ';score'
@@ -37,7 +37,7 @@ StrSystems = '{0}. {1} - {2} Stars and {3} planets ({4} points)'
 StrSystemsMore = 'and {0} more...'
 StrSystems0 = "You have no registered systems."
 #Help
-StrHelp = "Use {0} (link) (system name) to register a system, {1} to see score, and {2} to see registered systems !\nIn order to upload a system, use the \"Export System\" option and upload the .sc file to Discord before getting the link !"
+StrHelp = "Use {0} (link) (system name) to register a system, {1} to see your score, and {2} to see your registered systems !\nIn order to upload a system, use the \"Export System\" option and upload the .sc file to Discord before getting the link !"
 #On_ready
 StrOnReady = 'I\'m online, use {0} to register your systems !'
 #Translation
@@ -58,7 +58,7 @@ if Locale[0] == "fr_FR":
     StrSystemsMore = 'et {0} autres...'
     StrSystems0 = "Vous n'avez pas enregistrer de systèmes."
     #Help
-    StrHelp = "Utilisez {0} (lien) (nom du système) pour enregistrer un système, {1} pour voir le score, et {2} pour voir les systèmes enregistrés !\nDans l'ordre pour charger un système, utiliez l'option \"Exporter le système\" et charger le fichier .sc sur Discord avant de donner le lien !"
+    StrHelp = "Utilisez {0} (lien) (nom du système) pour enregistrer un système, {1} pour voir votre score, et {2} pour voir vos systèmes enregistrés !\nDans l'ordre pour charger un système, utiliez l'option \"Exporter le système\" et charger le fichier .sc sur Discord avant de donner le lien !"
     StrOnReady = 'Je suis en ligne, utiliser {0} pour enregistrer vos systèmes !'
 	
 #Program
