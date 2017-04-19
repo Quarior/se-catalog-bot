@@ -60,6 +60,7 @@ if Locale[0] == "fr_FR":
     StrSystems0 = "Vous n'avez pas enregistrer de systèmes."
     #Help
     StrHelp = "Utilisez {0} (lien) (nom du système) pour enregistrer un système, {1} pour voir votre score, et {2} pour voir vos systèmes enregistrés !\nDans l'ordre pour charger un système, utiliez l'option \"Exporter le système\" et charger le fichier .sc sur Discord avant de donner le lien !"
+    #On_ready
     StrOnReady = 'Je suis en ligne, utiliser {0} pour enregistrer vos systèmes !'
 	
 #Program
