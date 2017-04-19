@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 
 # Startup and reference values
 client = discord.Client()
+token = 'MzA0MTg4NDEwMDA2ODYzODcy.C9jxmw.4_JYxDjJ9wRXs5r7Hk5e2LUI3Ew' #token of the bot
+channel = '302921958696419328/302933532563734530'
 #Input
 Register = ';register'
 Score = ';score'
@@ -36,6 +38,8 @@ StrSystemsMore = 'and {0} more...'
 StrSystems0 = "You have no registered systems."
 #Help
 StrHelp = "Use {0} (link) (system name) to register a system, {1} to see score, and {2} to see registered systems !\nIn order to upload a system, use the \"Export System\" option and upload the .sc file to Discord before getting the link !"
+#On_ready
+StrOnReady = 'I\'m online, use {0} to register your systems !'
 #Translation
 if Locale[0] == "fr_FR":
     #French strings
@@ -55,6 +59,7 @@ if Locale[0] == "fr_FR":
 	StrSystems0 = "Vous n'avez pas enregistrer de systèmes."
 	#Help
 	StrHelp = "Utilisez {0} (lien) (nom du système) pour enregistrer un système, {1} pour voir le score, et {2} pour voir les systèmes enregistrés !\nDans l'ordre pour charger un système, utiliez l'option \"Exporter le système\" et charger le fichier .sc sur Discord avant de donner le lien !"
+	StrOnReady = 'Je suis en ligne, utiliser {0} pour enregistrer vos systèmes !'
 	
 #Program
 # All data titles are in proper cases i.e. Data Titles or command e.g. ;asteroid
@@ -186,9 +191,8 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    # await client.send_message(client.get_channel(str(217142893440270346)), 'I\'m online, use ;register to register your systems!')
+    await client.send_message(client.get_channel(str(channel)), StrOnReady.format(Register))
         
 
-#Runs the whole thing (token)
-client.run('MzA0MTg4NDEwMDA2ODYzODcy.C9jxmw.4_JYxDjJ9wRXs5r7Hk5e2LUI3Ew')
-
+#Runs the whole thing
+client.run(token)
