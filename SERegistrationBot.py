@@ -43,23 +43,23 @@ StrOnReady = 'I\'m online, use {0} to register your systems !'
 #Translation
 if Locale[0] == "fr_FR":
     #French strings
-	#Register
+    #Register
     StrCachingFile = 'Fichier de mise en cache...'
-	Strbm = ' **Félicitations pour télécharger votre premier système ! Vous avez gagné un multiplicateur 1.5x pour la première fois !**'
-	Stredited_message = '{0} enregistré à la base de donnée.\n{1} astres enregistrés avec {2} étoiles et {3} planètes.\n{4} points ont été ajoutés au compte de {5}.\nActuellement : {7} points.{6}'
-	StrSorry = "Désolé, ce système a déjà été découvert par {0}!"
-	StrErrorRegister = 'Enregistrer dans ce format :\n```{0} (lien au fichier .sc) (nom du système)```'
-	StrWait = "{0}, veuillez attendre {1} secondes avant d'enregistrer un autre système."
-	#Score
-	StrScore1 = "{0}, vous avez actuellement {1} points à partir de {2} systèmes."
-	StrScore0 = "{0}, vous avez actuellement aucun point. Utilisez {1} pour enregistrer un système exporté."
-	#Systems
-	StrSystems = '{0}. {1} - {2} Etoiles et {3} planètes ({4} points)'
-	StrSystemsMore = 'et {0} autres...'
-	StrSystems0 = "Vous n'avez pas enregistrer de systèmes."
-	#Help
-	StrHelp = "Utilisez {0} (lien) (nom du système) pour enregistrer un système, {1} pour voir le score, et {2} pour voir les systèmes enregistrés !\nDans l'ordre pour charger un système, utiliez l'option \"Exporter le système\" et charger le fichier .sc sur Discord avant de donner le lien !"
-	StrOnReady = 'Je suis en ligne, utiliser {0} pour enregistrer vos systèmes !'
+    Strbm = ' **Félicitations pour télécharger votre premier système ! Vous avez gagné un multiplicateur 1.5x pour la première fois !**'
+    Stredited_message = '{0} enregistré à la base de donnée.\n{1} astres enregistrés avec {2} étoiles et {3} planètes.\n{4} points ont été ajoutés au compte de {5}.\nActuellement : {7} points.{6}'	
+    StrSorry = "Désolé, ce système a déjà été découvert par {0}!"
+    StrErrorRegister = 'Enregistrer dans ce format :\n```{0} (lien au fichier .sc) (nom du système)```'
+    StrWait = "{0}, veuillez attendre {1} secondes avant d'enregistrer un autre système."
+    #Score
+    StrScore1 = "{0}, vous avez actuellement {1} points à partir de {2} systèmes."
+    StrScore0 = "{0}, vous avez actuellement aucun point. Utilisez {1} pour enregistrer un système exporté."
+    #Systems
+    StrSystems = '{0}. {1} - {2} Etoiles et {3} planètes ({4} points)'
+    StrSystemsMore = 'et {0} autres...'
+    StrSystems0 = "Vous n'avez pas enregistrer de systèmes."
+    #Help
+    StrHelp = "Utilisez {0} (lien) (nom du système) pour enregistrer un système, {1} pour voir le score, et {2} pour voir les systèmes enregistrés !\nDans l'ordre pour charger un système, utiliez l'option \"Exporter le système\" et charger le fichier .sc sur Discord avant de donner le lien !"
+    StrOnReady = 'Je suis en ligne, utiliser {0} pour enregistrer vos systèmes !'
 	
 #Program
 # All data titles are in proper cases i.e. Data Titles or command e.g. ;asteroid
