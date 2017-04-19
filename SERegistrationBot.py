@@ -1,5 +1,6 @@
 import discord
 import locale
+import os
 import asyncio
 import random
 import requests
@@ -196,3 +197,4 @@ async def on_ready():
 
 #Runs the whole thing
 client.run(token)
+os.system("pause")
