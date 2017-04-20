@@ -40,7 +40,8 @@ StrSystems0 = "You have no registered systems."
 #Help
 StrHelp = "Use {0} (link) (system name) to register a system, {1} to see your score, and {2} to see your registered systems !\nIn order to upload a system, use the \"Export System\" option and upload the .sc file to Discord before getting the link !"
 #On_ready
-StrOnReady = 'I\'m online, use {0} to register your systems !'
+Logged = 'Logged in as'
+StrOnReady = 'I\'m online, use {0} to see the help.'
 #Translation
 if Locale[0] == "fr_FR":
     #French strings
@@ -61,7 +62,8 @@ if Locale[0] == "fr_FR":
     #Help
     StrHelp = "Utilisez {0} (lien) (nom du système) pour enregistrer un système, {1} pour voir votre score, et {2} pour voir vos systèmes enregistrés !\nDans l'ordre pour charger un système, utiliez l'option \"Exporter le système\" et charger le fichier .sc sur Discord avant de donner le lien !"
     #On_ready
-    StrOnReady = 'Je suis en ligne, utiliser {0} pour enregistrer vos systèmes !'
+    Logged = 'Connecté en tant que'
+    StrOnReady = 'Je suis en ligne, utiliser {0} pour voir l\'aide.'
 	
 #Program
 # All data titles are in proper cases i.e. Data Titles or command e.g. ;asteroid
@@ -189,11 +191,11 @@ async def on_message(message):
 #Just to know it's running    
 @client.event
 async def on_ready():
-    print('Logged in as')
+    print(Logged + ' :')
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.send_message(client.get_channel(str(channel)), StrOnReady.format(Register))
+    await client.send_message(client.get_channel(str(channel)), StrOnReady.format(Help))
         
 
 #Runs the whole thing
